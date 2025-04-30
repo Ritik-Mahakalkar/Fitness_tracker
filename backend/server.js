@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Connection
+
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -53,7 +53,7 @@ const auth = (req, res, next) => {
   }
 };
 
-// Routes
+
 
 // Register
 app.post('/api/register', async (req, res) => {
@@ -96,7 +96,7 @@ app.post('/api/workouts', auth, async (req, res) => {
   }
 });
 
-// Get All Workouts
+// Workouts
 app.get('/api/workouts', auth, async (req, res) => {
   try {
     const workouts = await Workout.find({ userId: req.user.id }).sort({ date: -1 });
@@ -106,10 +106,10 @@ app.get('/api/workouts', auth, async (req, res) => {
   }
 });
 
-// Get Fitness Goals (dummy endpoint for demonstration)
+//  Goals 
 app.get('/api/goals', auth, async (req, res) => {
   try {
-    // Replace this with actual goal fetching logic, for now returning dummy data
+    
     const goals = [
       { _id: '1', name: 'Lose 5kg', progress: 60 },
       { _id: '2', name: 'Run 5km', progress: 80 }
@@ -120,10 +120,10 @@ app.get('/api/goals', auth, async (req, res) => {
   }
 });
 
-// Get Progress (dummy endpoint for demonstration)
+// Progress 
 app.get('/api/progress', auth, async (req, res) => {
   try {
-    // Replace this with actual progress data fetching logic, for now returning dummy data
+  
     const progressData = [
       { date: '2025-01-01', weight: 70 },
       { date: '2025-02-01', weight: 68 },
@@ -135,6 +135,6 @@ app.get('/api/progress', auth, async (req, res) => {
   }
 });
 
-// Start Server
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
