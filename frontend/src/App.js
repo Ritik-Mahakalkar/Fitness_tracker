@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'; // Custom CSS
+import './App.css'; 
 import ProgressChart from './Components/progressChart';
 import GoalTracker from './Components/GoalTracker';
 
@@ -32,7 +32,7 @@ const Alert = ({ message, type, clear }) => {
 const Navbar = ({ darkMode, toggleDarkMode, onLogout }) => (
   <nav className={`navbar navbar-expand-lg navbar-${darkMode ? 'dark bg-dark' : 'light bg-light'} shadow-lg px-3`}>
     <Link className="navbar-brand fw-bold" to="/">Fitness</Link>
-    <button className="btn btn-outline-light d-lg-none" onClick={toggleDarkMode}>🌙</button>
+   
     <div className="collapse navbar-collapse">
       {useAuth() && (
         <div className="ms-auto d-flex align-items-center gap-3">
