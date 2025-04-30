@@ -1,0 +1,141 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.login-form{
+  width: 24%;
+  
+}
+.register-form{
+  width: 24%;
+}
+.workout-form{
+  width: 44%;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  background:transparent;
+  color: #e0e0e0;
+}
+
+input, textarea {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+
+
+.btn {
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+  color: gray;
+  border-color: gray;
+}
+
+.btn-outline-primary:hover {
+  background-color: gray;
+  color: white;
+}
+
+.btn-outline-secondary {
+  color: gray;
+  border-color: gray;
+}
+
+.btn-outline-secondary:hover {
+  background-color: gray;
+  color: white;
+}
+
+.btn-outline-danger {
+  color: gray;
+  border-color: gray;
+}
+
+.btn-outline-danger:hover {
+  background-color: gray;
+  color: white;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.register-form, .login-form, .workout-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  margin-bottom: 3rem;
+}
+
+
+.alert {
+  border-radius: 10px;
+  font-weight: bold;
+  text-shadow: 0 0 2px #000;
+}
+body {
+  background: 
+  url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk2MC1uaW5nLTMwLmpwZw.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
